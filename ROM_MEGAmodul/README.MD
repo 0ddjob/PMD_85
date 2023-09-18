@@ -12,7 +12,7 @@ These changes include:<br>
 - replace "Slovak-specific" Tesla LQ425 7-segment LED with more common part.<br>
 
 ## [Original Design](Original_Design)
-The original design that I'm working from - thank you (whoever you are ... I still need to find their name).<br>
+The original design that I'm working from - thank you nostalcomp.cz<br>
 ![meganew_1_th](Original_Design/meganew_1_th.jpg)
 
 
