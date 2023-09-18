@@ -1,0 +1,60 @@
+Seznam pouzitych soucastek pro MEGAmodul PMD-85:
+************************************************
+
+Part     Value          Device          
+
+C1       47n            keramicky
+C2       47n            keramicky
+C3       47n            keramicky
+C4       47n            keramicky
+C5       47n            keramicky
+C6       47u            elyt
+C7       10u            elyt
+DIS1     LQ425          LQ425           LQ4XX (a komp. se spol. anodou)
+IO1      8255A          8255A                     DIL40 
+IO2      xEPROM-1       27C040 (27C4001 a komp.)  DIL32  nebo FLASH 29F040
+IO3      xEPROM-0       27C040 (27C4001 a komp.)  DIL32  nebo FLASH 29F040
+IO4      D346           D346D (D345, D347, D348)  DIL16
+IO5      7430           LS,ALS, HCT               DIL14
+IO6      7404           LS,ALS, HCT               DIL14
+IO7      7400           TTL, LS,ALS, HCT          DIL14
+IO8      74193          TTL, LS,ALS, HCT          DIL16
+IO9      74193          TTL, LS,ALS, HCT          DIL16
+IO10     7400           TTL, LS,ALS, HCT          DIL14
+JP1      jumper prepinani typu pameti Eprom/Flash        
+R1       4k7           
+R2       560R          
+R3       4k7            
+R4       4k7            
+R5       4k7            
+R6       4k7            
+R7       33k            
+R8       33k            
+RP1      47k            TRIMR
+T1       +1             prepinaci tlacitko bez aretace PB-22EX8
+T2       -1             prepinaci tlacitko bez aretace PB-22EX8
+X1       FRB konektor 30 pinu, samec do DPS 90°  TY5133011/30B Tesla
+X2, X3   konektory pro napajeni pripadnych dalsich doplnku - nejsou nutne!    
+
+
+POZOR: na desce plosnych spoju je prohozeno znaceni jumperu volby pameti.
+Spravne je to takto:
+1-2 EPROM 27Cxxxx
+2-3 FLASH 29Fxxxx
+
+Pro max. vyuziti modulu je nutne osadit 2 pameti á 512KB (27C040, 29F040)
+Je mozne pouzit i mensi (27C020, 29F020), ale kapacita bude nizsi.
+
+Vsechny 74xx obvody je idealni pouzit v provedeni LS, ALS, nebo HCT. 
+Minimalne ty, ktere jsou pripojeny primo na adresovou sbernici PMD (IO5 a IO6). 
+Ostatni muzou byt jen klasicke TTL bez pridavneho znaceni. 
+Nepouzivat HC a radeji ani S. 
+
+Trimrem RP1 se nastavuje proud jednotlivymi segmenty znakovky. Pri pouziti 
+D345 namisto D346 trimr odpada. D345 ma pevne dany proud segmenty. 
+Trimr u D346 je mozne nahradit dvojici odporu jako delice. 
+Pro znakovku LQ425 vyhovuji hodnoty odporu 27K(na Ucc)+15K(na GND). 
+
+Analogicky by se daly pouzit i obvody D348 (s trimrem) a D347 (bez trimru), ale 
+tyto nezobrazuji hexaznaky. Pokud nevadi hieroglyfy namisto hexaznaku, tak
+se daji klidne pouzit:-) 
